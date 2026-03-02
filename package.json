@@ -1,11 +1,13 @@
 {
   "name": "johaar-computer",
   "version": "2.0.0",
+  "type": "module",
   "description": "Premium refurbished laptops and repair services storefront",
   "main": "app.js",
   "scripts": {
+    "generate-manifest": "node generate-manifest.js",
     "dev": "parcel index.html --open",
-    "build": "parcel build index.html --public-url ./",
+    "build": "npm run generate-manifest && parcel build index.html --public-url ./",
     "serve": "python3 -m http.server 8000",
     "lint": "eslint js/**/*.js",
     "test": "echo \"No tests yet\" && exit 0"

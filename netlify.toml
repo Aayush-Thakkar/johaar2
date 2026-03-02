@@ -1,9 +1,8 @@
 # Netlify Configuration File
-# https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
   publish = "."
-  command = ""
+  command = "node generate-manifest.js"
 
 # Redirect rules
 [[redirects]]
@@ -50,21 +49,3 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Form settings
-[build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
-[build.processing.images]
-  compress = true
