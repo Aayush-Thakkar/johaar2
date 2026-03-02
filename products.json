@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Dell Latitude 7490",
+      "desc": "i7 8th Gen | 16GB RAM | 512GB SSD | 14\" FHD | Backlit KB",
+      "price": 28500,
+      "tag": "BEST SELLER",
+      "details": "Refurbished business laptop with excellent build quality. Includes Windows 10 Pro, webcam, and multiple ports. Battery life up to 8 hours. Perfect for professionals and students.",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=600&fit=crop",
+      "brand": "Dell",
+      "condition": "Refurbished"
+    },
+    {
+      "id": 2,
+      "title": "Lenovo ThinkPad T480",
+      "desc": "i5 8th Gen | 8GB RAM | 256GB SSD | Dual Battery | Touchscreen",
+      "price": 24000,
+      "tag": "WORKSTATION",
+      "details": "Durable ThinkPad with MIL-STD certification. Expandable RAM, Thunderbolt 3, and long battery life with dual setup. Legendary keyboard quality.",
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&h=600&fit=crop",
+      "brand": "Lenovo",
+      "condition": "Refurbished"
+    },
+    {
+      "id": 3,
+      "title": "HP EliteBook 840 G6",
+      "desc": "i7 8th Gen | 16GB RAM | 512GB SSD | Aluminum Body | Bang & Olufsen Audio",
+      "price": 31000,
+      "tag": "ULTRABOOK",
+      "details": "Premium ultrabook with privacy screen, fingerprint reader, and superior audio. Perfect for professionals who demand quality.",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop",
+      "brand": "HP",
+      "condition": "Refurbished"
+    },
+    {
+      "id": 4,
+      "title": "Dell XPS 15 9570",
+      "desc": "i7 8th Gen | 16GB RAM | 512GB SSD | GTX 1050Ti | 15.6\" 4K Touch",
+      "price": 65000,
+      "tag": "GAMING READY",
+      "details": "High-end creator laptop with dedicated GPU. Ideal for video editing, gaming, and creative work. Stunning 4K display with touch support.",
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=600&fit=crop",
+      "brand": "Dell",
+      "condition": "Refurbished"
+    },
+    {
+      "id": 5,
+      "title": "Lenovo IdeaPad 330",
+      "desc": "i3 8th Gen | 4GB RAM | 1TB HDD | 15.6\" HD",
+      "price": 18500,
+      "tag": "BUDGET PICK",
+      "details": "Budget-friendly laptop for everyday use. Upgradable storage and RAM. Great for students and basic computing needs.",
+      "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop",
+      "brand": "Lenovo",
+      "condition": "Refurbished"
+    },
+    {
+      "id": 6,
+      "title": "Microsoft Surface Laptop 3",
+      "desc": "i5 10th Gen | 8GB RAM | 256GB SSD | 13.5\" Touch | Alcantara KB",
+      "price": 45000,
+      "tag": "PREMIUM",
+      "details": "Sleek and portable with PixelSense display. Great for productivity and light creative tasks. Premium Alcantara keyboard finish.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop",
+      "brand": "Microsoft",
+      "condition": "Refurbished"
+    }
+  ]
+}

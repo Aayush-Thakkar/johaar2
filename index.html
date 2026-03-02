@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Johaar Computer: Premium refurbished laptops and expert repair services in Raipur. Chip-level diagnostics, motherboard revival, and enterprise-grade tech at affordable prices.">
+  <meta name="keywords" content="refurbished laptops, computer repair, Raipur, motherboard repair, Dell, Lenovo, HP, chip-level diagnostics">
+  <meta property="og:title" content="Johaar Computer | Premium Refurbished & Repair">
+  <meta property="og:description" content="Revive your tech with our expert services and premium refurbished laptops.">
+  <meta property="og:image" content="./assets/og-image.jpg">
+  <meta property="og:url" content="https://www.johaarcomputer.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Johaar Computer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Johaar Computer | Premium Refurbished & Repair">
+  <meta name="twitter:description" content="Revive your tech with our expert services and premium refurbished laptops.">
+  <meta name="twitter:image" content="./assets/og-image.jpg">
+  <meta name="theme-color" content="#3b82f6">
+  <title>Johaar Computer | Premium Refurbished & Repair</title>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Johaar Computer",
+    "description": "Premium refurbished laptops and expert repair services in Raipur. Chip-level diagnostics, motherboard revival, and enterprise-grade tech at affordable prices.",
+    "image": "./assets/og-image.jpg",
+    "@id": "https://www.johaarcomputer.com",
+    "url": "https://www.johaarcomputer.com",
+    "telephone": "+91-8982776402",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Millennium Plaza, GE Road",
+      "addressLocality": "Raipur",
+      "addressRegion": "Chhattisgarh",
+      "postalCode": "492001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.236559,
+      "longitude": 81.620404
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/johaarcomputer"
+    ]
+  }
+  </script>
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="logo">
+      <span class="logo-main">JOHAAR</span><span class="logo-accent">.COMPUTER</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="search-bar">
+      <label for="search-input" class="sr-only">Search products</label>
+      <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+      <button type="button" id="search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- WebGL Canvas -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+  
+  <!-- 3D Tooltip -->
+  <div id="3d-tooltip" class="hidden" role="tooltip" aria-live="polite"></div>
+  
+  <!-- WebGL Fallback -->
+  <noscript>
+    <div class="webgl-fallback">
+      <p>JavaScript is required for the full experience. Please enable JavaScript in your browser.</p>
+    </div>
+  </noscript>
+
+  <!-- Main Content -->
+  <main class="scroll-container" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="section" id="hero">
+      <div class="content">
+        <h1 class="hero-title">
+          <span class="glitch-wrapper">
+            <span class="glitch" data-text="REPAIR.">REPAIR.</span>
+          </span>
+          <span>REFURB.</span>
+          <span>REVIVE.</span>
+        </h1>
+        <p class="hero-subtitle">Premium refurbished laptops and chip-level motherboard diagnostics in Raipur.</p>
+        <button class="cta-btn" type="button" data-scroll-to="inventory">Shop Renewed Laptops</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="content align-right">
+        <h2>Engineering Precision.</h2>
+        <p>We don't just sell computers; we understand their DNA. From <span class="accent">voltage injection tests</span> to thermal repasting, our certified technicians ensure every machine operates at factory standards.</p>
+        <p class="trust-signal">✓ 6-month warranty • ✓ Free diagnostics • ✓ 10+ years experience</p>
+      </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section class="section" id="inventory">
+      <div class="content full-width">
+        <h2>Latest Arrivals</h2>
+        <p>Enterprise-grade laptops at student-friendly prices. All units come with 6-month warranty.</p>
+        
+        <div class="inventory-grid" id="inventory-grid" role="list">
+          <!-- Products will be dynamically inserted -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <div class="content full-width">
+        <h2>Our Expertise</h2>
+        <p>Comprehensive repair services with transparent pricing and quick turnaround.</p>
+        <ul class="services-list">
+          <li><strong>Dead Motherboard Revival</strong> (No Power/Display) — ₹2,500+</li>
+          <li><strong>BIOS Programming</strong> & IO Controller Replacement — ₹1,500+</li>
+          <li><strong>Broken Hinge</strong> Fabrication & Body Repair — ₹1,000+</li>
+          <li><strong>SSD & RAM Upgrades</strong> with Data Migration — ₹500+ (parts extra)</li>
+          <li><strong>Liquid Damage Recovery</strong> — ₹3,000+</li>
+          <li><strong>Screen Replacement</strong> — ₹4,000+</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+      <div class="content">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from satisfied clients in Raipur.</p>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>"Fixed my dead Dell laptop in 2 days! Like new, and half the price of buying one."</p>
+            <div class="testimonial-author">— Rajesh K., Raipur</div>
+          </article>
+          <article class="testimonial-card">
+            <p>"Upgraded RAM and SSD seamlessly. Great service and knowledgeable staff."</p>
+            <div class="testimonial-author">— Priya S., Student</div>
+          </article>
+          <article class="testimonial-card">
+            <p>"Bought a refurbished ThinkPad — performs better than expected. Highly recommend!"</p>
+            <div class="testimonial-author">— Amit P., Entrepreneur</div>
+          </article>
+        </div>
+        
+        <div style="margin-top: 3rem; text-align: center;">
+          <a href="https://www.instagram.com/johaarcomputer" target="_blank" rel="noopener noreferrer" class="instagram-cta">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>Follow us on Instagram @johaarcomputer</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="content align-right">
+        <h2>Book a Repair or Inquiry</h2>
+        <p class="contact-info">
+          <strong>Visit us:</strong> Millennium Plaza, GE Road, Raipur<br>
+          <strong>Call:</strong> <a href="tel:+918982776402" class="contact-link">+91-8982776402</a><br>
+          <strong>WhatsApp:</strong> <a href="https://wa.me/918982776402" target="_blank" rel="noopener noreferrer" class="contact-link">+91-8982776402</a><br>
+          <strong>Email:</strong> <a href="mailto:info@johaarcomputer.com" class="contact-link">info@johaarcomputer.com</a><br>
+          <strong>Hours:</strong> Mon-Sat 10AM-8PM
+        </p>
+        
+        <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display: none;">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+          
+          <label for="contact-name" class="sr-only">Your Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+          
+          <label for="contact-email" class="sr-only">Your Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+          
+          <label for="contact-phone" class="sr-only">Your Phone</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="Your Phone (e.g., 9876543210)" required>
+          
+          <label for="contact-device" class="sr-only">Device Model</label>
+          <input type="text" id="contact-device" name="device" placeholder="Device Model (e.g., Dell Inspiron 15)">
+          
+          <label for="contact-message" class="sr-only">Describe the issue</label>
+          <textarea id="contact-message" name="message" rows="3" placeholder="Describe the issue..." required></textarea>
+          
+          <button type="submit" class="cta-btn">Submit Request</button>
+        </form>
+        
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1176.799743748472!2d81.62040447193253!3d21.236559683195253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28ddb535ac58c1%3A0xda4f28c7f8ed35c3!2sJohaar%20Computer!5e0!3m2!1sen!2sin!4v1772099832642!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-col">
+      <h4>Johaar Computer</h4>
+      <p>Empowering Raipur with affordable tech since 2010.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect With Us</h4>
+      <div class="social-links">
+        <a href="https://instagram.com/johaarcomputer" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/918982776402" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer">Google Maps</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Service</a></li>
+        <li><a href="#refund">Refund Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Product Modal -->
+  <div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-content">
+      <button type="button" class="close-modal" data-close-modal aria-label="Close modal">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc" class="modal-desc"></p>
+      <div class="price" id="modal-price"></div>
+      <p id="modal-details" class="modal-details"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Floating Action Buttons -->
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918982776402?text=Hi%2C%20I%27m%20interested%20in%20your%20services" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Click-to-Call Button -->
+  <a href="tel:+918982776402" 
+     class="call-float" 
+     aria-label="Call us">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+    </svg>
+  </a>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
