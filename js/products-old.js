@@ -1,31 +1,24 @@
 /**
  * Product Data Module
- * Dynamically loads all products from data/products/ directory
+ * Loads products from individual JSON files in data/products/
  */
 
 let products = {};
 
-// Automatically discover and load all product files
+// Load all product files
 async function loadProducts() {
   try {
-    // Fetch all JSON files from data/products directory
-    const response = await fetch('./data/products/');
-    const html = await response.text();
+    // Fetch the list of product files from the directory
+    const productFiles = [
+      'dell-latitude-7490.json',
+      'lenovo-thinkpad-t480.json',
+      'hp-elitebook-840-g6.json',
+      'dell-xps-15-9570.json',
+      'lenovo-ideapad-330.json',
+      'microsoft-surface-laptop-3.json'
+    ];
     
-    // Extract .json filenames from directory listing
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const links = Array.from(doc.querySelectorAll('a'))
-      .map(a => a.getAttribute('href'))
-      .filter(href => href && href.endsWith('.json'));
-    
-    if (links.length === 0) {
-      // Fallback: try known files
-      return loadKnownProducts();
-    }
-    
-    // Load all product files
-    const productPromises = links.map(file => 
+    const productPromises = productFiles.map(file => 
       fetch(`./data/products/${file}`).then(res => res.json())
     );
     
@@ -39,63 +32,12 @@ async function loadProducts() {
     
     return products;
   } catch (error) {
-    console.warn('Directory listing failed, using fallback method');
-    return loadKnownProducts();
-  }
-}
-
-// Fallback: Load known product files
-async function loadKnownProducts() {
-  try {
-    // Try to load a manifest file first
-    const manifestResponse = await fetch('./data/products-manifest.json');
-    if (manifestResponse.ok) {
-      const manifest = await manifestResponse.json();
-      const productPromises = manifest.files.map(file => 
-        fetch(`./data/products/${file}`).then(res => res.json())
-      );
-      const productArray = await Promise.all(productPromises);
-      products = productArray.reduce((acc, product) => {
-        acc[product.id] = product;
-        return acc;
-      }, {});
-      return products;
-    }
-  } catch (e) {
-    // Manifest doesn't exist, use hardcoded list
-  }
-  
-  // Hardcoded fallback list (update when adding products)
-  const productFiles = [
-    'dell-latitude-7490.json',
-    'lenovo-thinkpad-t480.json',
-    'hp-elitebook-840-g6.json',
-    'dell-xps-15-9570.json',
-    'lenovo-ideapad-330.json',
-    'microsoft-surface-laptop-3.json'
-  ];
-  
-  const productPromises = productFiles.map(file => 
-    fetch(`./data/products/${file}`)
-      .then(res => res.ok ? res.json() : null)
-      .catch(() => null)
-  );
-  
-  const productArray = (await Promise.all(productPromises)).filter(p => p !== null);
-  
-  products = productArray.reduce((acc, product) => {
-    acc[product.id] = product;
-    return acc;
-  }, {});
-  
-  if (Object.keys(products).length === 0) {
+    console.error('Failed to load products:', error);
     return getFallbackProducts();
   }
-  
-  return products;
 }
 
-// Fallback products if all else fails
+// Fallback products if JSON fails to load
 function getFallbackProducts() {
   return {
     1: {
@@ -105,9 +47,52 @@ function getFallbackProducts() {
       price: 28500,
       tag: 'BEST SELLER',
       details: 'Refurbished business laptop with excellent build quality. Includes Windows 10 Pro, webcam, and multiple ports. Battery life up to 8 hours. Perfect for professionals and students.',
-      image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=600&fit=crop',
-      brand: 'Dell',
-      condition: 'Refurbished'
+      image: './assets/products/dell-latitude-7490.jpg'
+    },
+    2: {
+      id: 2,
+      title: 'Lenovo ThinkPad T480',
+      desc: 'i5 8th Gen | 8GB RAM | 256GB SSD | Dual Battery | Touchscreen',
+      price: 24000,
+      tag: 'WORKSTATION',
+      details: 'Durable ThinkPad with MIL-STD certification. Expandable RAM, Thunderbolt 3, and long battery life with dual setup. Legendary keyboard quality.',
+      image: './assets/products/lenovo-thinkpad-t480.jpg'
+    },
+    3: {
+      id: 3,
+      title: 'HP EliteBook 840 G6',
+      desc: 'i7 8th Gen | 16GB RAM | 512GB SSD | Aluminum Body | Bang & Olufsen Audio',
+      price: 31000,
+      tag: 'ULTRABOOK',
+      details: 'Premium ultrabook with privacy screen, fingerprint reader, and superior audio. Perfect for professionals who demand quality.',
+      image: './assets/products/hp-elitebook-840.jpg'
+    },
+    4: {
+      id: 4,
+      title: 'Dell XPS 15 9570',
+      desc: 'i7 8th Gen | 16GB RAM | 512GB SSD | GTX 1050Ti | 15.6" 4K Touch',
+      price: 65000,
+      tag: 'GAMING READY',
+      details: 'High-end creator laptop with dedicated GPU. Ideal for video editing, gaming, and creative work. Stunning 4K display with touch support.',
+      image: './assets/products/dell-xps-15.jpg'
+    },
+    5: {
+      id: 5,
+      title: 'Lenovo IdeaPad 330',
+      desc: 'i3 8th Gen | 4GB RAM | 1TB HDD | 15.6" HD',
+      price: 18500,
+      tag: 'BUDGET PICK',
+      details: 'Budget-friendly laptop for everyday use. Upgradable storage and RAM. Great for students and basic computing needs.',
+      image: './assets/products/lenovo-ideapad-330.jpg'
+    },
+    6: {
+      id: 6,
+      title: 'Microsoft Surface Laptop 3',
+      desc: 'i5 10th Gen | 8GB RAM | 256GB SSD | 13.5" Touch | Alcantara KB',
+      price: 45000,
+      tag: 'PREMIUM',
+      details: 'Sleek and portable with PixelSense display. Great for productivity and light creative tasks. Premium Alcantara keyboard finish.',
+      image: './assets/products/surface-laptop-3.jpg'
     }
   };
 }

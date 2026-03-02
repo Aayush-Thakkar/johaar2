@@ -1,0 +1,11 @@
+{
+  "id": 2,
+  "title": "Lenovo ThinkPad T480",
+  "desc": "i5 8th Gen | 8GB RAM | 256GB SSD | Dual Battery | Touchscreen",
+  "price": 24000,
+  "tag": "WORKSTATION",
+  "details": "Durable ThinkPad with MIL-STD certification. Expandable RAM, Thunderbolt 3, and long battery life with dual setup. Legendary keyboard quality.",
+  "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&h=600&fit=crop",
+  "brand": "Lenovo",
+  "condition": "Refurbished"
+}

@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "title": "Dell Latitude 7490",
+  "desc": "i7 8th Gen | 16GB RAM | 512GB SSD | 14\" FHD | Backlit KB",
+  "price": 28500,
+  "tag": "BEST SELLER",
+  "details": "Refurbished business laptop with excellent build quality. Includes Windows 10 Pro, webcam, and multiple ports. Battery life up to 8 hours. Perfect for professionals and students.",
+  "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=600&fit=crop",
+  "brand": "Dell",
+  "condition": "Refurbished"
+}

@@ -1,0 +1,11 @@
+{
+  "id": 3,
+  "title": "HP EliteBook 840 G6",
+  "desc": "i7 8th Gen | 16GB RAM | 512GB SSD | Aluminum Body | Bang & Olufsen Audio",
+  "price": 31000,
+  "tag": "ULTRABOOK",
+  "details": "Premium ultrabook with privacy screen, fingerprint reader, and superior audio. Perfect for professionals who demand quality.",
+  "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop",
+  "brand": "HP",
+  "condition": "Refurbished"
+}

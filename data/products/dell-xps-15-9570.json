@@ -1,0 +1,11 @@
+{
+  "id": 4,
+  "title": "Dell XPS 15 9570",
+  "desc": "i7 8th Gen | 16GB RAM | 512GB SSD | GTX 1050Ti | 15.6\" 4K Touch",
+  "price": 65000,
+  "tag": "GAMING READY",
+  "details": "High-end creator laptop with dedicated GPU. Ideal for video editing, gaming, and creative work. Stunning 4K display with touch support.",
+  "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=600&fit=crop",
+  "brand": "Dell",
+  "condition": "Refurbished"
+}
