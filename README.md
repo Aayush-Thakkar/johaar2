@@ -238,3 +238,4 @@ For issues or questions:
 **Built with**: HTML5, CSS3, JavaScript ES6+, Three.js, GSAP
 **Performance**: Optimized for 60fps on mid-range devices
 **Accessibility**: WCAG 2.1 AA compliant
+# johaar2
