@@ -1,11 +1,11 @@
 {
-  "id": 5,
-  "title": "Lenovo IdeaPad 330",
-  "desc": "i3 8th Gen | 4GB RAM | 1TB HDD | 15.6\" HD",
-  "price": 18500,
-  "tag": "BUDGET PICK",
   "details": "Budget-friendly laptop for everyday use. Upgradable storage and RAM. Great for students and basic computing needs.",
-  "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop",
   "brand": "Lenovo",
-  "condition": "Refurbished"
+  "price": 18500,
+  "desc": "i3 8th Gen | 4GB RAM | 1TB HDD | 15.6\" HD",
+  "title": "Lenovo IdeaPad 3308",
+  "tag": "BUDGET PICK",
+  "id": 5,
+  "condition": "Refurbished",
+  "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop"
 }
