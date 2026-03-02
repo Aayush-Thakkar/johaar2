@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: Aayush-Thakkar/johaar2
+  name: git-gateway
   branch: main
-  client_id: Ov23lixR1BStAxDSsyOP
 
 media_folder: "assets/products"
 public_folder: "/assets/products"
