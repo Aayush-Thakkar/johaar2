@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Aayush-Thakkar/johaar2
   branch: main
 
 media_folder: "assets/products"
